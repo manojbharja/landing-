@@ -771,6 +771,12 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({
           )}
         </section>
 
+        {draft.storageMode === 'vercel-tmp' && (
+          <div className="rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-xs text-sky-900">
+            <strong>Vercel Serverless Notice:</strong> Settings saved here work on the active instance, but Vercel resets temporary <code className="font-mono">/tmp</code> storage on redeploy or cold starts. To save changes permanently across all Vercel instances, connect free <strong>Upstash Redis / Vercel KV</strong> in your Vercel project (<code className="font-mono">KV_REST_API_URL</code> + <code className="font-mono">KV_REST_API_TOKEN</code>) or set defaults in Vercel Environment Variables (<code className="font-mono">APK_URL</code>, <code className="font-mono">META_PIXEL_ID</code>, <code className="font-mono">META_CAPI_ACCESS_TOKEN</code>).
+          </div>
+        )}
+
         {!draft.apkUrl && (
           <div className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-xs text-amber-900">
             <strong>APK File Not Set:</strong> Upload your signed <code className="font-mono">.apk</code> file or paste an APK download link below so visitors clicking the main button download the APK immediately instead of seeing Chrome&apos;s PWA install guide.

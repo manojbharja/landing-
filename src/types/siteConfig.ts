@@ -28,6 +28,7 @@ export interface SiteConfig {
   backgroundColor: string;
   gameRates: GameRateItem[];
   updatedAt: string;
+  storageMode?: 'disk' | 'redis' | 'vercel-tmp';
 }
 
 export interface DownloadEventRecord {

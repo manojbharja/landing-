@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index?__vp=/api/$1"
+    },
+    {
+      "source": "/uploads/(.*)",
+      "destination": "/api/index?__vp=/uploads/$1"
+    },
+    {
+      "source": "/manifest.webmanifest",
+      "destination": "/api/index?__vp=/manifest.webmanifest"
+    },
+    {
+      "source": "/((?!api/|uploads/|assets/|icons/|manifest\\.webmanifest|service-worker\\.js|registerSW\\.js|offline\\.html).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

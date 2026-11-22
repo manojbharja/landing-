@@ -21,9 +21,12 @@ import { DEFAULT_SITE_CONFIG, type SiteConfig } from './types/siteConfig';
 
 function isAdminPath(): boolean {
   if (typeof window === 'undefined') return false;
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
   return (
-    window.location.pathname === '/admin' ||
-    window.location.search.includes('admin=1')
+    path === '/admin' ||
+    path.startsWith('/admin/') ||
+    window.location.search.includes('admin=1') ||
+    window.location.hash === '#/admin'
   );
 }
 
