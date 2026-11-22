@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#8B0000" stop-opacity="0.72" />
+      <stop offset="65%" stop-color="#2D0000" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#160000" stop-opacity="1" />
+    </radialGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7D774" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#9A7214" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bgGlow)" />
+  <circle cx="256" cy="256" r="196" fill="none" stroke="url(#goldRim)" stroke-width="10" />
+  <circle cx="256" cy="256" r="176" fill="none" stroke="#8B0000" stroke-width="3" />
+  <polygon points="256,88 396,256 256,424 116,256" fill="#2A0000" stroke="url(#goldRim)" stroke-width="7" />
+  <path d="M188 192 L222 152 L256 184 L290 152 L324 192 L312 208 L200 208 Z" fill="url(#goldRim)" />
+  <text x="256" y="294" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="112" letter-spacing="4" fill="#FFF7DF">SM</text>
+  <text x="256" y="344" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="22" letter-spacing="6" fill="#F7D774">SHANT</text>
+</svg>

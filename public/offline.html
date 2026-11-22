@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#8B0000" />
+    <title>Offline — SHANT MATKA</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #160000;
+        background-image: radial-gradient(circle at 50% 25%, rgba(139, 0, 0, 0.36) 0%, #160000 70%);
+        color: #f9fafb;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        padding: 24px;
+      }
+      .card {
+        width: 100%;
+        max-width: 400px;
+        background: rgba(28, 6, 6, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+        padding: 32px 24px;
+        text-align: center;
+      }
+      .icon-wrap {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 20px;
+        border-radius: 14px;
+        background: #2b0404;
+        border: 1px solid rgba(230, 184, 77, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #d1d5db;
+        margin-bottom: 24px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 46px;
+        padding: 12px 20px;
+        border: 0;
+        border-radius: 10px;
+        background: #8b0000;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 150ms ease;
+      }
+      .btn:hover,
+      .btn:focus-visible {
+        background: #a50a0a;
+        outline: 2px solid #f7d774;
+        outline-offset: 2px;
+      }
+      .hint {
+        margin-top: 16px;
+        font-size: 12px;
+        color: #9ca3af;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <div class="icon-wrap" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F7D774" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="2" y1="2" x2="22" y2="22" />
+          <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+          <path d="M2 8.82a15 15 0 0 1 4.17-2.65" />
+          <path d="M10.66 5c4.01-.36 8.14.9 11.34 3.76" />
+          <path d="M16.85 11.25a10 10 0 0 1 2.22 1.68" />
+          <path d="M5 12.86a10 10 0 0 1 5.17-2.8" />
+          <line x1="12" y1="20" x2="12.01" y2="20" />
+        </svg>
+      </div>
+      <h1>You are offline</h1>
+      <p>
+        SHANT MATKA requires an active internet connection to load live markets, account sessions, and results.
+      </p>
+      <button type="button" class="btn" id="retryBtn">Try Again</button>
+      <p class="hint" id="statusText">Check mobile data or Wi-Fi and tap Try Again.</p>
+    </main>
+    <script>
+      document.getElementById('retryBtn').addEventListener('click', function () {
+        window.location.reload();
+      });
+      window.addEventListener('online', function () {
+        document.getElementById('statusText').textContent = 'Connection restored. Reloading...';
+        window.location.reload();
+      });
+    </script>
+  </body>
+</html>

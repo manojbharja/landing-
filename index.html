@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>SHANT MATKA — Android PWA &amp; cPanel Deployment Kit</title>
+    <meta name="description" content="SHANT MATKA PWA infrastructure, manifest, safe service worker, icon generator, and cPanel WebAPK-ready deployment kit for https://new.rajagamevip.site/." />
+    <meta property="og:title" content="SHANT MATKA — Android PWA &amp; cPanel Deployment Kit" />
+    <meta property="og:description" content="Installable Android PWA kit for SHANT MATKA (https://new.rajagamevip.site/) with safe static caching and custom icon generation." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#8B0000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SHANT MATKA" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script>
+      window.__deferredPWAInstallPrompt = null;
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        window.__deferredPWAInstallPrompt = e;
+        window.dispatchEvent(new CustomEvent('pwa-prompt-captured'));
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

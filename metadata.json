@@ -1,0 +1,8 @@
+{
+  "name": "SHANT MATKA PWA & WebAPK Studio",
+  "description": "Production PWA infrastructure, manifest, safe service worker, icon generator, and cPanel deployment kit for SHANT MATKA (https://new.rajagamevip.site/).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
